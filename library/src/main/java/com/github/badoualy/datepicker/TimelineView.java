@@ -2,9 +2,6 @@ package com.github.badoualy.datepicker;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.format.DateUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -16,6 +13,10 @@ import java.text.DateFormatSymbols;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class TimelineView extends RecyclerView {
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Month -->
-    <dimen name="mti_month_width">72dp</dimen>
+    <dimen name="mti_month_width">82dp</dimen>
     <dimen name="mti_month_height">48dp</dimen>
     <dimen name="mti_month_lbl_padding_horizontal">8dp</dimen>
     <dimen name="mti_month_lbl_padding_vertical">5dp</dimen>

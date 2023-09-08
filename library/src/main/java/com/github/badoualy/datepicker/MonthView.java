@@ -2,9 +2,6 @@ package com.github.badoualy.datepicker;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +11,10 @@ import android.widget.TextView;
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
 import java.util.Locale;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MonthView extends RecyclerView {
 
@@ -325,13 +326,14 @@ public class MonthView extends RecyclerView {
             this.year = year;
             this.month = month;
 
+            String str = year % (int) Math.pow(10, yearDigitCount) + "年";
             String text = MONTHS[month];
             text = text.substring(0, Math.min(text.length(), 3)).toUpperCase(Locale.US);
             if (yearDigitCount > 0) {
-                text += yearOnNewLine ? "\n" : " ";
-                text += year % (int) Math.pow(10, yearDigitCount);
+                text += yearOnNewLine ? "\n" : "";
+                str += text;
             }
-            lbl.setText(text);
+            lbl.setText(str);
             int color = selected ? colorSelected : beforeSelection ? colorBeforeSelection : defaultColor;
             lbl.setTextColor(color);
             indicator.setColor(color);

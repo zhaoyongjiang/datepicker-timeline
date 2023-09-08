@@ -1,13 +1,13 @@
 package com.github.badoualy.datepicker.sample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import com.github.badoualy.datepicker.DatePickerTimeline;
-import com.github.badoualy.datepicker.MonthView;
 
 import java.util.Calendar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
         DatePickerTimeline timeline = findViewById(R.id.timeline);
-        timeline.setDateLabelAdapter(new MonthView.DateLabelAdapter() {
-            @Override
-            public CharSequence getLabel(Calendar calendar, int index) {
-                return Integer.toString(calendar.get(Calendar.MONTH) + 1) + "/" + (calendar.get(Calendar.YEAR) % 2000);
-            }
-        });
+//        timeline.setDateLabelAdapter(new MonthView.DateLabelAdapter() {
+//            @Override
+//            public CharSequence getLabel(Calendar calendar, int index) {
+//                return Integer.toString(calendar.get(Calendar.MONTH) + 1) + "/" + (calendar.get(Calendar.YEAR) % 2000);
+//            }
+//        });
 
         timeline.setOnDateSelectedListener(new DatePickerTimeline.OnDateSelectedListener() {
             @Override
