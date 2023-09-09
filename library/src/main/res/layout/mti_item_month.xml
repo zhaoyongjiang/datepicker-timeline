@@ -5,7 +5,6 @@
     android:layout_width="@dimen/mti_month_width"
     android:layout_height="wrap_content"
     android:clickable="true"
-    android:background="?attr/selectableItemBackgroundBorderless"
     android:minHeight="@dimen/mti_month_height"
     android:paddingBottom="@dimen/mti_month_lbl_padding_vertical"
     android:paddingEnd="@dimen/mti_month_lbl_padding_horizontal"
